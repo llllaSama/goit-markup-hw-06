@@ -586,7 +586,7 @@ address {
 }
 
 .ftr-mailing-list {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .futer-input {
@@ -599,6 +599,7 @@ address {
   line-height: calc(20 / 16);
   color: rgba(255, 255, 255, 0.6);
   padding: 15px 16px;
+  margin-right: 10px;
 }
 .futer-subscribe-bnt {
   display: inline-flex;
@@ -630,7 +631,6 @@ address {
 .futer-form-grup {
   display: block;
   text-align: left;
-  padding-bottom: 4px;
   font-size: 12px;
   line-height: calc(14 / 12);
   color: var(--scnd-txt-cl);
@@ -827,14 +827,21 @@ address {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-}
 
+}
+.modal-btn-svg {
+  transition-property: fill;
+  transition-duration: var(--anim-main);
+  transition-timing-function: var(--cubic-bezier);
+}
 
 .modal-btn:hover .modal-btn-svg {
   fill: var(--accent-txt-cl);
+
 }
 .modal-btn:focus .modal-btn-svg {
   fill: var(--accent-txt-cl);
+
 }
 
 .register-form-title {
@@ -844,13 +851,13 @@ address {
   line-height: calc(23 / 20);
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .registr-form-wrap {
   position: relative;
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 .registr-form-wrap:last-child {
   margin-bottom: 0;
@@ -859,11 +866,12 @@ address {
 .register-form-label {
   display: block;
   text-align: left;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: calc(14 / 12);
   color: var(--scnd-txt-cl);
 }
+
 
 .register-form-input,
 .register-form-message {
@@ -874,6 +882,23 @@ address {
   width: 100%;
   height: 40px;
   outline: transparent;
+  transition-property: border-color;
+  transition-duration: var(--anim-main);
+  transition-timing-function: var(--cubic-bezier);
+}
+.register-form-input:hover,
+.register-form-input:focus {
+  border-color: var(--accent-txt-cl);
+}
+
+.register-form-input:hover .register-form-icon {
+  fill: var(--accent-txt-cl);
+}
+
+
+.register-form-message:hover,
+.register-form-message:focus {
+  border-color: var(--accent-txt-cl);
 }
 .register-form-message {
   height: 120px;
